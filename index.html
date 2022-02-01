@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<htlm>
+<head>
+  <meta charset="utf-8">
+  <title>My economy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./resources/css/style.css">
+
+
+</head>
+
+<body>
+
+  <div class="landing-container">
+    <div class="main-banner">
+      <h1>FLOWS</h1>
+    </div>
+
+
+    <div class="row l12 s8">
+
+      <div class="table-format col l8 s12">
+        <table id="transactionTable" >
+          <tr>
+            <th>Flow</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Delete</th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="transaction-form col l4 offset-s2 s8">
+        <form id="transactionForm">
+          <h4>Add New Transaction</h4>
+          <div class="form-item-container">
+            <div class="form-item form-first-container">
+              <h5>Select the type of flow...</h5>
+              <div class="radio-form-input">
+                <p>
+                  <label>
+                    <input id="incomeType" class="with-gap radio-button" value="Income" name="transactionType" type="radio" checked />
+                    <span  for="incomeType">Income</span>
+                  </label>
+                  <label>
+                    <input id="outcomeType" class="with-gap radio-button" value="Outcome" name="transactionType" type="radio" checked />
+                    <span  for="outcomeType">Outcome</span>
+                  </label>
+                  </p>
+              </div>
+            </div>
+            <div>
+              <div class="form-item input-field col s8">
+                <input type="text" id="transactionDescription" class="user-input-form validate" name="transactionDescription">
+                <label for="transactionDescription" class="label-form">Description</label>
+              </div>
+              <div class="form-item input-field col s4">
+                <input type="number" id="transactionAmount" class="user-input-form validate" name="transactionAmount">
+                <label for="transactionAmount" class="label-form">Amount</label>
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="transactionCategory" class="category-label"></label>
+              <select id="transactionCategory" class="browser-default" name="transactionCategory">
+                <option value="" disabled selected>Select Flow Category</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-item form-button-container">
+            <button class="form-button btn waves-effect waves-light" value="Add flow" type="submit" name="action">
+              ADD
+              <i class="material-icons">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="resources/js/script.js"></script>
+</body>
+</htlm>
