@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   drawCategory();
   let transactionObjArray = JSON.parse(localStorage.getItem("transactionData"));
   transactionObjArray.forEach(function (arrayElement) {
-      insertRowInTransactionTable(arrayElement);
-    }
+    insertRowInTransactionTable(arrayElement);
+  }
   );
 })
 
@@ -41,7 +41,7 @@ function insertRowInTransactionTable(transactionObj) {
 
   deleteButton.addEventListener("click", (event) => {
     let transactionRow = event.target.parentNode.parentNode;
-    let transactionId = transactionRow.transactionId;
+    let transactionId = transactionRow.getAttribute("data-transaction-id");
     transactionRow.remove();
     deleteTransactionObj(transactionId);
   });
@@ -78,7 +78,7 @@ function drawCategory() {
     "Transport",
     "Eat&Fun",
   ];
-  for(let index = 0; index < allCategories.length; index++) {
+  for (let index = 0; index < allCategories.length; index++) {
     insertCategory(allCategories[index]);
   }
 }
